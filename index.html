@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Kids & Momma Essentials</title>
+<meta name="description" content="Curated essentials for newborns and postpartum moms." />
+<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <!-- header / hero etc. (same as previously agreed) -->
+  <header class="site-header">
+    <div class="brand">
+      <img src="assets/images/logo.png" alt="Kids & Momma Essentials" class="logo-img">
+      <div class="brand-text"><strong>Kids & Momma Essentials</strong><small>Baby & postpartum essentials</small></div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero hero-pattern fade-in">
+      <div class="hero-left">
+        <h1>Everything Mom & Baby Need</h1>
+        <p>Curated essentials for newborns and postpartum mothers — soft, safe, and thoughtfully designed.</p>
+        <div class="actions">
+          <a href="shop.html" class="btn btn-primary">Shop essentials</a>
+          <a href="about.html" class="btn btn-ghost">Learn more</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <img src="assets/images/placeholder.png" alt="Featured" />
+      </div>
+    </section>
+
+    <section class="featured fade-in" id="featured-grid" aria-live="polite"></section>
+  </main>
+
+  <!-- floating nav -->
+  <nav class="floating-nav" aria-label="Floating navigation">
+    <a href="index.html" title="Home" class="nav-link"><i class="bx bx-home"></i></a>
+    <a href="shop.html" title="Shop" class="nav-link"><i class="bx bx-store"></i></a>
+    <a href="about.html" title="About" class="nav-link"><i class="bx bx-info-circle"></i></a>
+    <a href="contact.html" title="Contact" class="nav-link"><i class="bx bx-envelope"></i></a>
+    <a href="cart.html" title="Cart" class="nav-link"><i class="bx bx-shopping-bag"></i><span id="cart-count">0</span></a>
+  </nav>
+
+  <div id="toast-container" class="toast-container"></div>
+
+  <script type="module" src="assets/js/script.js"></script>
+</body>
+</html>

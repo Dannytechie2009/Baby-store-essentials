@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shop — Kids & Momma Essentials</title>
+  <meta name="description" content="Shop newborn and postpartum essentials. Browse, add to cart, and checkout (demo)." />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind = window.tailwind || {};
+    tailwind.config = { theme: { extend: { fontFamily: { sans: ['Poppins', 'ui-sans-serif', 'system-ui'] }, colors: { mint: '#7FD8C6', peach: '#FFD1C1', cream: '#FFF6EA', 'soft-gray': '#6B7280' }}}}
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
+</head>
+<body class="bg-cream min-h-screen text-gray-800">
+
+  <header class="bg-white/75 backdrop-blur-sm sticky top-0 z-30">
+    <div class="max-w-6xl mx-auto px-6 py-3 flex items-center gap-4">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="assets/images/logo.png" alt="logo" class="h-12 w-auto" onerror="this.src='assets/placeholder.png'"/>
+        <div class="text-lg font-semibold">Kids & Momma Essentials</div>
+      </a>
+      <nav class="ml-auto flex items-center gap-4 text-sm">
+        <a href="index.html" class="hover:text-mint">Home</a>
+        <a href="products.html" class="font-semibold">Shop</a>
+        <a href="about.html" class="hover:text-mint">About</a>
+        <a href="contact.html" class="hover:text-mint">Contact</a>
+        <a href="cart.html" class="flex items-center gap-2 hover:text-mint" aria-label="View cart">
+          <i class='bx bx-shopping-bag text-xl'></i><span id="cart-count-header-2" class="text-sm">0</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto p-6">
+    <h1 class="text-3xl font-bold text-mint">Shop</h1>
+
+    <div class="mt-6 flex flex-col md:flex-row gap-4 items-start">
+      <input id="search" aria-label="Search products" placeholder="Search products..." class="px-4 py-2 rounded border w-full md:flex-1" />
+      <select id="sort" class="px-3 py-2 rounded border w-48">
+        <option value="new">Newest</option>
+        <option value="low">Price: Low → High</option>
+        <option value="high">Price: High → Low</option>
+      </select>
+    </div>
+
+    <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-6" aria-live="polite"></div>
+  </main>
+
+  <div id="toast-container" class="fixed bottom-6 right-6 z-50 space-y-2"></div>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/cart.js"></script>
+</body>
+</html>
